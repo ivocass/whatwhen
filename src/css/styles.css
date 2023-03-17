@@ -19,11 +19,12 @@ html {
 
 body {
   height: 100%;
+  margin: 0;
 }
 
 main {
   background-color: white;
-  border-radius: 15px;
+
   padding: 16px;
   height: 100%;
   box-sizing: border-box;

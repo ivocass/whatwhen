@@ -19,16 +19,6 @@
     "48": "assets/logo48.png",
     "128": "assets/logo128.png"
   },
-  "web_accessible_resources": [
-    {
-      "resources": ["assets/open-media.png"]
-    }
-  ],
-  "content_scripts": [
-    {
-      "css": ["src/css/styles.css", "src/css/toggle-switch.css"],
-      "js": ["src/main.js", "src/sherlock.js", "src/sugar.min.js"]
-    }
-  ],
+
   "manifest_version": 3
 }
