@@ -11,10 +11,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+html {
   margin: 0;
   width: 445px;
   height: 225px;
+}
+
+body {
+  height: 100%;
 }
 
 main {
@@ -28,6 +32,29 @@ main {
   justify-content: space-between;
 }
 
+#top-frame {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 86px;
+  height: 15px;
+}
+
+#logo-btn,
+#exit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#exit-btn img {
+  width: 16px;
+  height: 16px;
+}
+
 input {
   background-color: #f2f2f2;
   color: #292929;
@@ -38,4 +65,28 @@ input {
   border-radius: 10px;
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  opacity: 0.7;
+}
+
+footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+footer span {
+  user-select: none;
+  color: #a1a1a1;
+}
+
+.switch-toggle-override {
+  scale: 0.5;
+  position: relative;
+  top: 2px;
+  left: 6px;
 }

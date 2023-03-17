@@ -3,6 +3,7 @@
   "version": "0.0.0.1",
   "description": "Create events faster and easier using natural language - just type What and When.",
   "author": "ivocass",
+  "permissions": ["storage"],
   "action": {
     "default_icon": {
       "16": "assets/logo16.png",
@@ -25,7 +26,7 @@
   ],
   "content_scripts": [
     {
-      "css": ["src/styles.css"],
+      "css": ["src/css/styles.css", "src/css/toggle-switch.css"],
       "js": ["src/main.js", "src/sherlock.js", "src/sugar.min.js"]
     }
   ],

@@ -5,13 +5,31 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What When</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/css/toggle-switch.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
   </head>
   <body>
     <main>
-      <div><img src="logo.png" alt="Logo" /> ... x</div>
-      <input type="text" />
-      <footer>Delay by 30 minutes</footer>
+      <div id="top-frame">
+        <button id="logo-btn" title="Open this extension in the Chrome Webstore">
+          <img id="logo" src="logo.png" alt="Logo" />
+        </button>
+        </button>
+        <button id="exit-btn" title="Exit">
+          <img src="exit-icon.png" alt="Exit icon" />
+        </button>
+      </div>
+      <input type="text" placeholder="Type an event title and date" />
+      <footer>
+        <label class="switch switch-toggle-override">
+          <input type="checkbox" />
+          <span class="slider round"></span> </label
+        ><span
+          title="Google Calendar always sets the default notification for 30 minutes before the event time.
+If you instead want to be notified at the exact time of the event, you can work around it by delaying your event."
+          >Delay by 30 minutes</span
+        >
+      </footer>
     </main>
 
     <script src="/src/sherlock.js"></script>
