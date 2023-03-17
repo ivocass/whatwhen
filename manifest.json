@@ -1,0 +1,33 @@
+{
+  "name": "What When - For Google Calendar",
+  "version": "0.0.0.1",
+  "description": "Create events faster and easier using natural language - just type What and When.",
+  "author": "ivocass",
+  "action": {
+    "default_icon": {
+      "16": "assets/logo16.png",
+      "32": "assets/logo32.png",
+      "48": "assets/logo48.png",
+      "128": "assets/logo128.png"
+    },
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "assets/logo16.png",
+    "32": "assets/logo32.png",
+    "48": "assets/logo48.png",
+    "128": "assets/logo128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/open-media.png"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "css": ["src/styles.css"],
+      "js": ["src/main.js", "src/sherlock.js", "src/sugar.min.js"]
+    }
+  ],
+  "manifest_version": 3
+}
