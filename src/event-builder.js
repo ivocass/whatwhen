@@ -3,8 +3,6 @@ class EventBuilder {
     'https://www.google.com/calendar/render?action=TEMPLATE&text={title}&dates={dates}}';
   #sugar = Sugar.Date;
 
-  constructor() {}
-
   /**
    * @text: a String like "eat some tacos on friday at 9"
    * @delaysEvent: Google Calendar always sets a default notification 30 minutes before the event
@@ -18,7 +16,7 @@ class EventBuilder {
     // get an object with the event title, start date and end date
     const parsed = Sherlock.parse(text);
 
-    // for now, we always delay 30 minutes (because Calendar sets a notification 30 minutes before)
+    if (parsed.startDate === null) parsed.startDate = new Date();
     if (delaysEvent) this.#sugar.advance(parsed.startDate, '30 minutes');
 
     // events usually dont have an end date, so it's gonna be null
@@ -27,7 +25,7 @@ class EventBuilder {
       parsed.endDate = this.#sugar.advance(endDate, '15 minutes');
     }
 
-    const title = parsed.eventTitle || '';
+    const title = parsed.eventTitle || 'Event';
     const startDate = this.#sugar(parsed.startDate).format(
       '{year}{MM}{dd}T%H%M%S'
     );
@@ -37,10 +35,6 @@ class EventBuilder {
       .replace('{title}', encodeURI(title))
       .replace('{dates}', startDate + '/' + endDate);
 
-    if (url !== '') {
-      window.location.href = url;
-    } else {
-      console.error('url is empty');
-    }
+    return url;
   }
 }

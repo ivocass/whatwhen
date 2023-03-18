@@ -17,15 +17,18 @@ Check it out at https://sugarjs.com/
 Otherwise your event title might be reduced to a single word (known bug).
 -Tip: no need to write "pm"
 The extension assumes you mean "pm", unless you type "am".
+-Tip: you can shorten words like: "tue", "aug", "tmrw", "tom"
+-Tip: you can simplify "12:45" as "1245"
+-Tip: to add an ending date, type both dates separated by a "-"
 
 # Examples
 
-You can test sentences at https://sherlock.neil.gg/
-
--"leave at 6"
+-"leave at 6" <-- will be set for tomorrow if today is later than 6pm
 -"essay due tomorrow by 10am"
 -"run 10k on sunday at 1"
+-"museum in 2 weeks at 12"
+-"vacations from tomorrow at 11 - apr 2 at 3"
+-"hike on sunday 11am - 4"
+-"lunch with client tmrw 12 - 1"
 
--To add an ending date, type both dates separated by a "-"
-eg: "vacations from tomorrow at 11 - apr 2 at 3"
-eg: "hike on sunday 11am - sunday at 4"
+You can test sentences at https://sherlock.neil.gg/
