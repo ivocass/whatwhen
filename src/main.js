@@ -6,13 +6,14 @@
  * Check it out at https://sugarjs.com/
  *
  * TODO:
- * -logo opens extension page
+ * -add URL for logo button
  * -after typing and idle: "Press Enter to continue"
  */
 
 const sugar = Sugar.Date;
 const switchToggle = document.querySelector('.switch input');
 const exitBtn = document.querySelector('#exit-btn');
+const logoBtn = document.querySelector('#logo-btn');
 const input = document.querySelector('input');
 const eventBuilder = new EventBuilder();
 let delaysEvent = false;
@@ -21,6 +22,7 @@ input.focus();
 
 switchToggle.addEventListener('click', onSwitchToggleClick);
 exitBtn.addEventListener('click', (e) => window.close());
+// logoBtn.addEventListener('click', (e) => window.open('will get the url once the addon is published'));
 input.addEventListener('keydown', inputKeyDownListener);
 
 // load user config
@@ -41,8 +43,8 @@ function inputKeyDownListener(e) {
   // Enter
   if (e.keyCode === 13) {
     const url = eventBuilder.getEventURL(input.value, delaysEvent);
-    console.log('url', url);
-    // if (url.startsWith('https://')) window.open(url);
+
+    if (url.startsWith('https://')) window.open(url);
   }
   // Esc
   else if (e.keyCode === 27) {
