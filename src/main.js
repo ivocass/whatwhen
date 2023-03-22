@@ -6,7 +6,6 @@
  * Check it out at https://sugarjs.com/
  *
  * TODO:
- * -add URL for logo button
  * -after typing and idle: "Press Enter to continue"
  */
 
@@ -22,7 +21,11 @@ input.focus();
 
 switchToggle.addEventListener('click', onSwitchToggleClick);
 exitBtn.addEventListener('click', (e) => window.close());
-// logoBtn.addEventListener('click', (e) => window.open('will get the url once the addon is published'));
+logoBtn.addEventListener('click', (e) =>
+  window.open(
+    'https://chrome.google.com/webstore/detail/what-when-for-google-cale/ailhmdjmehfihlglldbflebkofpblcgh'
+  )
+);
 input.addEventListener('keydown', inputKeyDownListener);
 
 // load user config
